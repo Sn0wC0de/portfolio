@@ -4,7 +4,8 @@ const image = document.getElementById('logo');
 const body =document.getElementsByTagName('body')
 const spans = document.getElementsByTagName('span');
 const panel = document.getElementById('panel');
-const container = document.getElementById('container');
+const aboutContainer = document.getElementById('about-container');
+const skillsContainer = document.getElementById('skills-container');
 // line brake on dot
 const landingFraze = `Good Afternoon Sir.I'm Dmitrij.Front-End WEB Developer.`;
 
@@ -89,21 +90,42 @@ image.addEventListener('click', removeLetterClass);
 
 window.addEventListener('scroll', function (e) {
   windowScroll = this.window.scrollY - 300; 
-  isVisible =  document.getElementById('h2').offsetTop; 
-  if (container.classList.contains('animate') & windowScroll < isVisible) {
-    container.classList.add('unanimate')
-    container.classList.remove('animate');
+  isVisible =  document.getElementById('h2-about').offsetTop; 
+  elHeight = document.getElementById('h2-about').offsetHeight;
+// console.log(document.getElementById('h2-about'))
+  // console.log('isvisible', isVisible, 'windowscroll', windowScroll)
+  if (aboutContainer.classList.contains('animate') & windowScroll < isVisible) {
+    aboutContainer.classList.add('unanimate')
+    aboutContainer.classList.remove('animate');
      }
-  else if (  windowScroll > isVisible & windowScroll + 300 <  1500) {
-    container.classList.remove('unanimate');
-    container.classList.add('animate');
+  else if (  windowScroll > isVisible & windowScroll + 300 <  1400) {
+    aboutContainer.classList.remove('unanimate');
+    aboutContainer.classList.add('animate');
    } 
   else  {
-    container.classList.add('unanimate')
-    container.classList.remove('animate');
+    aboutContainer.classList.add('unanimate')
+    aboutContainer.classList.remove('animate');
    }  
 });
 
+
+// window.addEventListener('scroll', function (e) {
+//   windowScroll = this.window.scrollY; 
+//   isVisible =  document.getElementById('h2-skills').offsetTop; 
+ 
+//   if (skillsContainer.classList.contains('animate') & windowScroll < isVisible-400) {
+//     skillsContainer.classList.add('unanimate')
+//     skillsContainer.classList.remove('animate');
+//      }
+//   else if (  windowScroll > isVisible & windowScroll <  2000) {
+//     skillsContainer.classList.remove('unanimate');
+//     skillsContainer.classList.add('animate');
+//    } 
+//   else  {
+//     skillsContainer.classList.add('unanimate')
+//     skillsContainer.classList.remove('animate');
+//    }  
+// });
 
 
 // on load

@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+:root {
+  --font-color: rgb(243, 228, 14);
+}
+
+* {
+  text-decoration: none;
+  list-style-type: none;
+}
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  --nav-load-time: 300ms;
+  --nav-link-load-time: 500ms;
+  display: flex;
+
+  
+}
+
+
+header {
+  position: relative;
+  width:200px;
+  background-color: rgb(14, 70, 255);
+}
+
+.logo {
+  position: fixed;
+  background-image: url("./logo.png");
+  background-size: cover;
+  height: 150px;
+  min-width: 200px;
+  animation: nav-load var(--nav-load-time) ease-in;
+
+}
+
+nav {
+  min-width: 200px;
+  margin-top: 60px;;
+  height: 100%;
+  color: var(--font-color);
+  font-family: "Luckiest Guy", cursive;
+  display: flex;
+  flex-direction: column;
+  
+  animation: nav-load var(--nav-load-time) ease-in;
+  
+}
+
+nav ul li{
+  border: 2px solid var(--font-color);
+  border-radius: 20px;
+  box-shadow: 5px 5px 3px grey;
+  text-align: center;
+  margin-top: 10px;
+  padding: 10px;
+  padding-bottom: 0;
+  font-size: 1.5rem;
+  animation-name: nav-link-load;
+  animation-duration: var(--nav-link-load-time);
+  animation-timing-function: ease-in;
+  animation-delay: var(--nav-load-time);
+  transform: scale(0);
+  animation-fill-mode: forwards;
+}
+
+nav ul li:first-child {
+  animation-name: nav-first-link-load;
+  transform: translateY(-1000%);
+}
+nav ul li:nth-last-child(2) {
+  animation-name: nav-last-link-load;
+  transform: translateY(1000%);
+}
+a {
+  color: inherit;
+}
+
+.list {
+  position: fixed;
+  display: grid;
+  margin-top: 200px;
+  margin-left: -10px;
+}
+
+.social {
+  margin-top: 100px;
+  display: flex;
+  font-size: 2em;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  
+}
+
+.social :nth-child(3) {
+  transform: translateX(-1000%);
+  animation: from-left 1s ease-in-out  forwards;
+}
+.social :nth-child(2) {
+  transform: translateX(-1000%);
+  animation: from-left 1s ease-in-out 400ms forwards;
+}
+.social :nth-child(1) {
+  transform: translateX(-1000%);
+  animation: from-left 1s ease-in-out 500ms forwards;
+}
+
+
+
+
+
+.panel {
+  width: 100%;
+  overflow: hidden;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+}
+
+.landing-text {
+  font-family: "Luckiest Guy", cursive;
+content: contain;
+  height: 100vh;
+  font-size: 6vw;
+  margin-top: 20vh;
+  margin-left: 10vw
+}
+.landing-text div{
+    display: flex;
+    max-height: 120px;
+}
+
+.rotate {  
+  animation: rotate 2s  forwards;
+  }
+.unrotate {
+  animation: unrotate 2s forwards;
+}
+
+/* About */
+.about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 2rem;
+  font-family: 'Roboto', sans-serif;
+  margin-left: 10%;
+  height: 100vh;
+  font-size: 2rem;
+  
+}
+
+.container {
+  display: block;
+  position: relative;
+  z-index: 9;
+  width: 100%;
+  user-select: none;
+  margin-left: 300px;
+  max-width: 500px;
+}
+.container h2 {
+  font-size: 100px;
+  opacity: 0.1;
+  transform:translateX(-800px);
+  
+}
+
+.behind {
+  position: relative;
+  top: -100px
+}
+.text {
+  display: block;
+  z-index: 3;
+}
+
+.animate {
+  
+  animation: 2s textRight forwards;
+}
+
+
+.unanimate {
+  animation: 2s textLeft forwards;
+}
+
+.skills {
+  height: 100vh;
+}
+.work {
+  height: 100vh;
+}
+.contacts {
+  height: 100vh;
+}
+
+
+/* Transform on hover or active */
+
+.logo:hover{
+  transform: scale(1.1);
+}
+
+.fab:hover,
+.fas:hover {
+  color: rgb(255, 124, 1);
+  transform: scale(1.3);
+  
+}
+
+li:hover {
+  color: rgb(255, 124, 1);
+  border: 2px solid rgb(255, 124, 1);
+  transform: scale(1.1) !important;
+}
+
+li:active,
+.logo:active,
+.fab:active,
+.fas:active {
+ 
+  opacity: 0.9;
+}
+
+
+
+
+/* ANIMATIONS */
+
+@keyframes rotate {
+  0% {
+    color: black;
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(720deg);
+    color: var(--font-color);
+  }
+}
+  
+
+@keyframes unrotate {
+  0% {
+    color: var(--font-color);
+    transform: rotateY(720deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+    color: black;
+  }
+}
+
+@keyframes nav-load {
+  0%{
+    transform: translateX(-100%)
+  }
+  100% {
+    transform: translateX(0)
+
+  }
+}
+@keyframes nav-link-load {
+  0%{
+    transform: scale(0)
+  }
+  90%{
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1)
+
+  }
+}
+    
+@keyframes nav-first-link-load {
+  0%{
+    transform: translateY(-1000%);
+  }
+  90%{
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(0);
+
+  }
+}
+
+@keyframes nav-last-link-load {
+  0%{
+    transform: translateY(1000%);
+  }
+  90%{
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+
+  }
+}
+@keyframes textRight {
+  0% {
+    transform:translateX(0px);}
+  100% {
+      transform:translateX(550px);}
+
+}
+
+@keyframes textLeft {
+  0% {
+    transform:translateX(550px);}
+  100% {
+    transform:translateX(0px);}
+
+}
+@keyframes from-left {
+  0%{
+    transform: translateX(-1000%)
+  }
+  100% {
+    transform: translateX(0)
+
+  }
+}
+
+@media all and (max-width: 900px){
+body{
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+
+header {
+  width: 100%;
+}
+nav {
+  width: 100%;
+  display: flex;
+}
+.logo {
+  display: none;
+}
+.list{
+  display: flex;
+  position: relative;
+  width: auto;
+}
+}

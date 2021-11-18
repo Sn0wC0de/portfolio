@@ -6,6 +6,8 @@ const spans = document.getElementsByTagName('span');
 const panel = document.getElementById('panel');
 const aboutContainer = document.getElementById('about-container');
 const skillsContainer = document.getElementById('skills-container');
+const workContainer = document.getElementById('work-container');
+const contactsContainer = document.getElementById('contacts-container');
 // line brake on dot
 const landingFraze = `Good Afternoon Sir.I'm Dmitrij.Front-End WEB Developer.`;
 
@@ -83,49 +85,64 @@ function removeLetterClass() {
   })
 }
 
+// animation for text come from left side on scroll
+function animateWord (paragraph, windowScroll) {
+  elementTop =  paragraph.offsetTop; 
+  elementHeight =  paragraph.offsetHeight; 
+  elTop =  paragraph.getBoundingClientRect().top;
+  elBottom = paragraph.getBoundingClientRect().bottom;
+  // animation in
+  if(paragraph.classList.contains('up')& !paragraph.classList.contains('down')) {
+    if (windowScroll > elTop) {
+      paragraph.classList.remove('unanimate')
+      paragraph.classList.add('animate');
+      paragraph.classList.remove('up');
+    }
+  }
+  // animation out
+  if(!paragraph.classList.contains('up') & !paragraph.classList.contains('down')) {
+    if(elementHeight > elBottom + 60 ) {
+      paragraph.classList.remove('animate');
+      paragraph.classList.add('unanimate');
+      // 
+    }
+    if(windowScroll > elementTop+elementHeight){
+      paragraph.classList.add('down');
+    }
+  }
+  // animation in
+  if(!paragraph.classList.contains('up') & paragraph.classList.contains('down') ) {
+    if(windowScroll < elementTop+elementHeight ) {
+      paragraph.classList.add('animate');
+      paragraph.classList.remove('unanimate')
+      paragraph.classList.add('up');
+    } 
+  }
+// aniamtion out
+  if(paragraph.classList.contains('up') & paragraph.classList.contains('down') ) {
+    if(windowScroll < elTop) {
+      paragraph.classList.add('unanimate');
+      paragraph.classList.remove('animate')
+      paragraph.classList.remove('down');
+    }
+  }
+}
+
 
 // event listeners
 image.addEventListener('click', removeLetterClass);
 
 
 window.addEventListener('scroll', function (e) {
-  windowScroll = this.window.scrollY - 300; 
-  isVisible =  document.getElementById('h2-about').offsetTop; 
-  elHeight = document.getElementById('h2-about').offsetHeight;
-// console.log(document.getElementById('h2-about'))
-  // console.log('isvisible', isVisible, 'windowscroll', windowScroll)
-  if (aboutContainer.classList.contains('animate') & windowScroll < isVisible) {
-    aboutContainer.classList.add('unanimate')
-    aboutContainer.classList.remove('animate');
-     }
-  else if (  windowScroll > isVisible & windowScroll + 300 <  1400) {
-    aboutContainer.classList.remove('unanimate');
-    aboutContainer.classList.add('animate');
-   } 
-  else  {
-    aboutContainer.classList.add('unanimate')
-    aboutContainer.classList.remove('animate');
-   }  
+  windowScroll = this.window.scrollY; 
+  animateWord(aboutContainer,windowScroll);
+  animateWord(skillsContainer,windowScroll);
+  animateWord(workContainer,windowScroll);
+  animateWord(workContainer,windowScroll);
+  animateWord(contactsContainer, windowScroll)
 });
 
 
-// window.addEventListener('scroll', function (e) {
-//   windowScroll = this.window.scrollY; 
-//   isVisible =  document.getElementById('h2-skills').offsetTop; 
- 
-//   if (skillsContainer.classList.contains('animate') & windowScroll < isVisible-400) {
-//     skillsContainer.classList.add('unanimate')
-//     skillsContainer.classList.remove('animate');
-//      }
-//   else if (  windowScroll > isVisible & windowScroll <  2000) {
-//     skillsContainer.classList.remove('unanimate');
-//     skillsContainer.classList.add('animate');
-//    } 
-//   else  {
-//     skillsContainer.classList.add('unanimate')
-//     skillsContainer.classList.remove('animate');
-//    }  
-// });
 
 
 // on load

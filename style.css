@@ -141,7 +141,11 @@ content: contain;
 }
 
 /* About */
-.about {
+.about,
+.skills,
+.work,
+.contacts
+ {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -153,7 +157,10 @@ content: contain;
   
 }
 
-#about-container {
+#about-container,
+#skills-container,
+#work-container,
+#contacts-container {
   display: block;
   position: relative;
   z-index: 9;
@@ -162,7 +169,10 @@ content: contain;
   margin-left: 300px;
   max-width: 500px;
 }
-#about-container h2, #skills-container h2 {
+#about-container h2, 
+#skills-container h2, 
+#work-container h2,
+#contacts-container h2 {
   font-size: 100px;
   opacity: 0.1;
   transform:translateX(-800px);
@@ -178,6 +188,16 @@ content: contain;
   z-index: 3;
 }
 
+.skills {
+  height: 100vh;
+}
+
+.contacts {
+  height: 100vh;
+}
+
+
+
 .animate {
   
   animation: 2s textRight forwards;
@@ -186,22 +206,6 @@ content: contain;
 
 .unanimate {
   animation: 2s textLeft forwards;
-}
-
-.skills {
-  height: 100vh;
-}
-
-#skills-container h2 {
-  font-size: 100px;
-  opacity: 0.1;
-  transform:translateX(-380px);
-}
-.work {
-  height: 100vh;
-}
-.contacts {
-  height: 100vh;
 }
 
 
@@ -214,7 +218,7 @@ content: contain;
 .fab:hover,
 .fas:hover {
   color: rgb(255, 124, 1);
-  transform: scale(1.3);
+  transform: scale(1.3) !important;
   
 }
 
@@ -333,7 +337,8 @@ li:active,
 }
 
 @media all and (max-width: 900px){
-body{
+
+/* body{
   width: 100vw;
   display: flex;
   flex-direction: column;
@@ -352,5 +357,5 @@ nav {
 }
 .logo {
   display: none;
-}
+} */
 }

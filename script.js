@@ -83,6 +83,8 @@ function removeLetterClass() {
   arr.forEach((el)=> {
     el.classList.remove('rotate', 'unrotate')
   })
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  
 }
 
 // animation for text come from left side on scroll

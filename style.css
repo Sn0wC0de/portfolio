@@ -170,11 +170,21 @@ a {
 }
 #about-container h2, 
 #skills-container h2, 
-#work-container h2,
+/* #work-container h2, */
 #contacts-container h2 {
   font-size: 8rem;
   opacity: 0.1;
-  transform:translateX(-70rem);
+  transform:translateX(-1400px);
+
+  
+  
+}
+#work-container
+ {
+  font-size: 5.5rem;
+  opacity: 0.1;
+  margin-left: -900px;
+
   
 }
 
@@ -193,6 +203,9 @@ a {
 
 .contacts {
   height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .work {
   height: 100vh;
@@ -366,17 +379,17 @@ li:active,
 }
 @keyframes textRight {
   0% {
-    transform:translateX(0px);}
+    transform:translateX(0rem);}
   100% {
-      transform:translateX(550px);}
+      transform:translateX(1000px);}
 
 }
 
 @keyframes textLeft {
   0% {
-    transform:translateX(550px);}
+    transform:translateX(1000px);}
   100% {
-    transform:translateX(0px);}
+    transform:translateX(0rem);}
 
 }
 @keyframes from-left {
@@ -389,26 +402,3 @@ li:active,
   }
 }
 
-@media all and (max-width: 900px){
- 
-/* body{
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0;
-  padding-top: 0;
-}
-
-
-header {
-  width: 100%;
-  display: none;
-}
-nav {
-  width: 100%;
-  display: flex;
-}
-.logo {
-  display: none;
-} */
-}

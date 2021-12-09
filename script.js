@@ -9,7 +9,7 @@ const skillsContainer = document.getElementById('skills-container');
 const workContainer = document.getElementById('work-container');
 const contactsContainer = document.getElementById('contacts-container');
 // line brake on dot
-const landingFraze = `Good Afternoon Sir.I'm Dmitrij.Front-End WEB Developer.`;
+const landingFraze = `Good Afternoon Sir. I'm Dmitrij. Front-End WEB-Dev.`;
 
 
 

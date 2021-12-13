@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Roboto:wght@400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 :root {
   --font-color: rgb(243, 228, 14);
@@ -17,10 +17,8 @@ body {
   --nav-load-time: 300ms;
   --nav-link-load-time: 500ms;
   display: flex;
-
   
 }
-
 
 header {
   position: relative;
@@ -35,29 +33,25 @@ header {
   height: 150px;
   min-width: 200px;
   animation: nav-load var(--nav-load-time) ease-in;
-
 }
 
 nav {
   min-width: 200px;
-  margin-top: 60px;;
-  height: 100%;
+  margin-top: 60px;
   color: var(--font-color);
   font-family: "Luckiest Guy", cursive;
   display: flex;
   flex-direction: column;
-  
   animation: nav-load var(--nav-load-time) ease-in;
-  
 }
 
-nav ul li{
+nav ul li {
   border: 2px solid var(--font-color);
   border-radius: 20px;
   box-shadow: 5px 5px 3px grey;
   text-align: center;
-  padding: .5em .5em 0 .5em ;
-  margin: .25rem;
+  padding: 0.5em 0.5em 0 0.5em;
+  margin: 0.25rem;
   font-size: 1.5rem;
   animation-name: nav-link-load;
   animation-duration: var(--nav-link-load-time);
@@ -87,17 +81,16 @@ a {
 }
 
 .social {
-  margin-top: 100px;
+  margin-top: 200px;
   display: flex;
   font-size: 2rem;
   justify-content: space-between;
   margin-bottom: 50px;
-  
 }
 
 .social :nth-child(3) {
   transform: translateX(-1000%);
-  animation: from-left 1s ease-in-out  forwards;
+  animation: from-left 1s ease-in-out forwards;
 }
 .social :nth-child(2) {
   transform: translateX(-1000%);
@@ -107,10 +100,6 @@ a {
   transform: translateX(-1000%);
   animation: from-left 1s ease-in-out 500ms forwards;
 }
-
-
-
-
 
 .panel {
   width: 100%;
@@ -123,18 +112,18 @@ a {
   font-family: "Luckiest Guy", cursive;
   content: contain;
   height: 100vh;
-  font-size: 6.5rem;
+  font-size: 5.5vw;
   margin-top: 20%;
-  margin-left: 8rem;
+  margin-left: 4rem;
 }
-.landing-text div{
-    display: flex;
-    max-height: 120px;
+.landing-text div {
+  display: flex;
+  max-height: 120px;
 }
 
-.rotate {  
-  animation: rotate 2s  forwards;
-  }
+.rotate {
+  animation: rotate 2s forwards;
+}
 .unrotate {
   animation: unrotate 2s forwards;
 }
@@ -143,17 +132,15 @@ a {
 .about,
 .skills,
 .work,
-.contacts
- {
+.contacts {
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding-left: 2rem;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   margin-left: 10%;
 
   font-size: 2rem;
-  
 }
 
 #about-container,
@@ -169,28 +156,27 @@ a {
   max-width: 50rem;
 }
 #about-container h2, 
-#skills-container h2, 
-/* #work-container h2, */
+#skills-container h2 
+/* #work-container h2, */ {
+  font-size: 8rem;
+  opacity: 0.1;
+  transform: translateX(-1400px);
+}
+
 #contacts-container h2 {
   font-size: 8rem;
   opacity: 0.1;
-  transform:translateX(-1400px);
-
-  
-  
+  margin-left: -1500px;
 }
-#work-container
- {
+#work-container {
   font-size: 5.5rem;
   opacity: 0.1;
   margin-left: -900px;
-
-  
 }
 
 .behind {
   position: relative;
-  top: -100px
+  top: -100px;
 }
 .text {
   display: block;
@@ -220,8 +206,8 @@ a {
 
 .slider {
   position: relative;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   transform-style: preserve-3d;
   animation: rotate 40s linear infinite;
 }
@@ -243,7 +229,7 @@ a {
   height: 100%;
   transform-origin: center;
   transform-style: preserve-3d;
-  transform:rotateY(calc(var(--i)*45deg)) translateZ(500px)
+  transform: rotateY(calc(var(--i) * 45deg)) translateZ(500px);
 }
 .slider span img {
   position: absolute;
@@ -253,31 +239,27 @@ a {
   height: 100%;
   border-radius: 5px;
   object-fit: cover;
-  transition:2s;
+  transition: 2s;
 }
 
-.slider span:hover img{
+.slider span:hover img {
   transform: translateY(-50px) scale(1.2);
 }
 .slider:hover {
-  animation-play-state:paused;
+  animation-play-state: paused;
 }
-
 
 .animate {
-  
   animation: 2s textRight forwards;
 }
-
 
 .unanimate {
   animation: 2s textLeft forwards;
 }
 
-
 /* Transform on hover or active */
 
-.logo:hover{
+.logo:hover {
   transform: scale(1.1);
 }
 
@@ -285,7 +267,6 @@ a {
 .fas:hover {
   color: rgb(255, 124, 1);
   transform: scale(1.3) !important;
-  
 }
 
 li:hover {
@@ -298,12 +279,8 @@ li:active,
 .logo:active,
 .fab:active,
 .fas:active {
- 
   opacity: 0.9;
 }
-
-
-
 
 /* ANIMATIONS */
 
@@ -317,7 +294,6 @@ li:active,
     color: var(--font-color);
   }
 }
-  
 
 @keyframes unrotate {
   0% {
@@ -331,74 +307,70 @@ li:active,
 }
 
 @keyframes nav-load {
-  0%{
-    transform: translateX(-100%)
+  0% {
+    transform: translateX(-100%);
   }
   100% {
-    transform: translateX(0)
-
+    transform: translateX(0);
   }
 }
 @keyframes nav-link-load {
-  0%{
-    transform: scale(0)
+  0% {
+    transform: scale(0);
   }
-  90%{
+  90% {
     transform: scale(1.1);
   }
   100% {
-    transform: scale(1)
-
+    transform: scale(1);
   }
 }
-    
+
 @keyframes nav-first-link-load {
-  0%{
+  0% {
     transform: translateY(-1000%);
   }
-  90%{
+  90% {
     transform: translateY(50%);
   }
   100% {
     transform: translateY(0);
-
   }
 }
 
 @keyframes nav-last-link-load {
-  0%{
+  0% {
     transform: translateY(1000%);
   }
-  90%{
+  90% {
     transform: translateY(-50%);
   }
   100% {
     transform: translateY(0);
-
   }
 }
 @keyframes textRight {
   0% {
-    transform:translateX(0rem);}
+    transform: translateX(0rem);
+  }
   100% {
-      transform:translateX(1000px);}
-
+    transform: translateX(1000px);
+  }
 }
 
 @keyframes textLeft {
   0% {
-    transform:translateX(1000px);}
+    transform: translateX(1000px);
+  }
   100% {
-    transform:translateX(0rem);}
-
+    transform: translateX(0rem);
+  }
 }
 @keyframes from-left {
-  0%{
-    transform: translateX(-1000%)
+  0% {
+    transform: translateX(-1000%);
   }
   100% {
-    transform: translateX(0)
-
+    transform: translateX(0);
   }
 }
-

@@ -25,7 +25,7 @@
           title="Click to Reset font Color to Black"
         ></div
       ></a>
-      <nav>
+      <nav id="nav">
         <ul class="list">
           <li>
             <a href="#about"> About</a>
@@ -39,7 +39,6 @@
           <li>
             <a href="#contacts">Contacts</a>
           </li>
-        </ul>  
           <div class="social">
             <a href="https://github.com/Sn0wC0de" target="_blank">
               <i class="fab fa-github"></i>
@@ -69,13 +68,14 @@
         </div>
         <div class="behind">
           <div class="text">
+            <p>Hi, my name is Dmitrij</p>
             <p>
               I'm self taught Front-End Developer. "Learning by doing" is my
               motto.
             </p>
-            <p>This type of learning might have a few drawbacks, but...</p>
+            <p>This type of learning might have a few drawbacks...</p>
             <p>
-              High atention to details, enjoying to solve problems and always
+              But High atention to details, enjoying to solve problems and always
               seeking for improvements moves me forward.
             </p>
             <p></p>
@@ -88,7 +88,8 @@
         </div>
         <div class="behind">
           <div class="text">
-            <p>Best skills for self taught Developer is Google.</p>
+            <p>Best skills for self taught Developer is Google and documentation.</p>
+            <p>I've finished several courses on udemy. Most of them from ZTM academy.</p>
           </div>
         </div>
       </div>
@@ -96,12 +97,12 @@
         <div class="container up work-container" id="work-container">
           <h2 id="h2-work">WORK</h2>
         </div>
-        <!-- <div class="behind">
+        <div class="behind">
           <div class="text">
-            <p>MY Work</p>
+            <p>My Work So far.</p>
           </div>
           
-        </div> -->
+        </div>
         <div class="work-container">
           <div class="slider">
             <span style="--i: 1"
@@ -160,6 +161,17 @@
     </div>
 
     <!-- script -->
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="landingFraze.js"></script>
+
+    <script>
+      if (screen && screen.width > 801) {
+        document.write('<script type="text/javascript" src="script.js"><\/script>');
+      } 
+      else if (screen && screen.width < 800){
+        document.write('<script type="text/javascript" src="script2.js"><\/script>');
+      }
+      </script>
+
+    <!-- <script type="text/javascript" src="script.js"></script> -->
   </body>
 </html>

@@ -9,7 +9,7 @@ const skillsContainer = document.getElementById('skills-container');
 const workContainer = document.getElementById('work-container');
 const contactsContainer = document.getElementById('contacts-container');
 // line brake on dot
-const landingFraze = `Good Afternoon Sir. I'm Dmitrij. Front-End WEB-Dev.`;
+// const landingFraze = `HeLLo Comrade. My name is Dmitrij. I'm Front-End WEB-Dev.`;
 
 
 
@@ -61,7 +61,7 @@ function everyLeter() {
       }
       // add a dot at the end of the sentence
       if(list.length === index + 1){
-        leterP.textContent = `${leter}.`;
+        leterP.textContent = `${leter} !`;
      
       } else {
         leterP.textContent = leter;

@@ -17,7 +17,7 @@ body {
     font-size: 10px;
     display: flex;
     flex-direction: column;
-
+    background-color: whitesmoke;
   
     
   }
@@ -29,7 +29,7 @@ body {
       z-index: 1;
   }
 nav .list{
-    font-family: "Luckiest Guy", cursive;
+      font-family: "Luckiest Guy", cursive;
       display: flex;
       align-items: center;
       justify-content: space-evenly;
@@ -80,13 +80,31 @@ nav .list{
 span {
     display: inline-block;
     font-family: "Luckiest Guy", cursive;
-    font-size: 3em;
+    font-size: 2.5em;
 }
 
 
 
 img {
-    margin-left: 5%;
-    width: 90%;
+  padding-top: 2em;
+    width: 90vw;
 
+}
+
+.about,
+.skills,
+.work,
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+.contacts {
+  margin-bottom: 50px;
+}
+
+.panel div {
+  text-align: center;
 }

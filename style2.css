@@ -28,6 +28,7 @@ body {
       width: 100%;
       height: 50px;
       z-index: 1;
+      transition: top 0.3s
   }
 nav .list{
       font-family: "Luckiest Guy", cursive;

@@ -30,6 +30,10 @@ body {
       z-index: 1;
       transition: top 0.3s
   }
+
+ 
+
+
 nav .list{
       font-family: "Luckiest Guy", cursive;
       display: flex;
@@ -62,6 +66,7 @@ nav .list{
     height: 50px;
     font-size: 1.5rem;
     z-index: 1;
+    transition-duration: 300ms;
 }
 .panel {
     position: relative;

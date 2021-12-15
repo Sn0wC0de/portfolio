@@ -5,18 +5,11 @@ function forLandingFraze() {
     sentenceList.forEach((element,i) => {
         let div = document.createElement('div');
         console.log(element);
-        if (element) {
+        element = element + '!';
+        if (element.length > 1) {
         let div = document.createElement('div');
-        div.appendChild(element)
-        landingText.appendChild(div)
-        } else {
-            let wordList = div.split(" ");
-            let num = Math.round(wordList.length/2);
-            let div2 = document.createElement('div');
-            div.append(wordList[0],wordList[1]);
-            div2.append(wordList[2],wordList[3]);
-            landingText.append(div,div2)
-        }
+        div.textContent = element;
+          landingText.appendChild(div) }
       })   
 };
 
@@ -24,10 +17,16 @@ function forLandingFraze() {
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
   var currentScrollPos = window.pageYOffset;
+
   if (prevScrollpos > currentScrollPos) {
-    document.getElementById("nav").style.top = "0";
+    console.log(0)
+    document.getElementById("header").style.top = "0";
   } else {
-    document.getElementById("nav").style.top = "-50px";
+    console.log(50)
+    document.getElementById("header").style.top = "-50px";
   }
   prevScrollpos = currentScrollPos;
 }
+// on load
+
+forLandingFraze()

@@ -36,15 +36,23 @@ function rotate(ind) {
 }
 
 
-
+let specialLeter = false;
 
 function everyLeter() {
   let text = landingFraze;
   // split fraze in sentences on dot
   let sentenceList = text.split(".");
+  // if(sentenceList[1].includes("Dmitrij")) {
+  //   console.log( "I got I gay")
+  // }
   // adding css to every letter
   sentenceList.forEach((element, i) => {
     let div = document.createElement('div');
+    if(element.includes("Dmitrij")){
+      element = element.replace("Dmitrij" , "!DMITRIJ!")
+      console.log(element,  "I got I gay")
+    }
+
     // spliting every letter
     let list = element.split("");
     // creating new element and adding letter to it with css
@@ -55,6 +63,15 @@ function everyLeter() {
       span.addEventListener('mouseenter', rotate);
       // span.setAttribute("onmouseenter", `rotate('${span.id}')`);
       let leterP = document.createElement('p');
+      // adding special style for Name
+      if(leter === "!") {
+        specialLeter = !specialLeter;
+        console.log(specialLeter)
+        leter = "";
+      } 
+      if(specialLeter) {
+        leterP.classList.add("name")
+      }
       // adding space between words
       if(leter === ' ') {
         leterP.style.marginLeft = '20px'

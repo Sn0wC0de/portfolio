@@ -6,7 +6,8 @@
   --hover-color: rgb(249,87,56);
   --bg-color: rgb(13,59,102);
   --bg-panel: whitesmoke;
-  --h-color: rgb(250, 240, 202) 
+  --h-color: rgb(250, 240, 202) ;
+  --extra-color: rgb(238, 150, 75);
 
 }
 
@@ -180,14 +181,14 @@ a {
 #about-container h2, 
 #skills-container h2 
 /* #work-container h2, */ {
-  color: var(--hover-color);
+  color: var(--extra-color);
   font-size: 8rem;
   opacity: 0.6;
   transform: translateX(-1400px);
 }
 
 #contacts-container h2 {
-  color: var(--hover-color);
+  color: var(--extra-color);
 
   font-size: 8rem;
   opacity: 0.6;
@@ -197,7 +198,7 @@ a {
   transform: translateX(-9rem);
 }
 #work-container {
-  color: var(--hover-color);
+  color: var(--extra-color);
 
   font-size: 5.5rem;
   opacity: 0.6;
@@ -311,6 +312,9 @@ li:active,
 .fas:active {
   opacity: 0.9;
 }
+.name {
+  color: var(--hover-color);
+}
 
 /* ANIMATIONS */
 
@@ -321,13 +325,14 @@ li:active,
   }
   100% {
     transform: rotateY(720deg);
-    color: var(--hover-color);
+    color: var(--extra-color);
   }
 }
 
 @keyframes unrotate {
   0% {
-    color: var(--hover-color);
+    color: var(--extra-color);
+
     transform: rotateY(720deg);
   }
   100% {

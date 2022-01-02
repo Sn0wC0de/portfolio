@@ -50,7 +50,6 @@ function everyLeter() {
     let div = document.createElement('div');
     if(element.includes("Dmitrij")){
       element = element.replace("Dmitrij" , "!DMITRIJ!")
-      console.log(element,  "I got I gay")
     }
 
     // spliting every letter
@@ -66,7 +65,6 @@ function everyLeter() {
       // adding special style for Name
       if(leter === "!") {
         specialLeter = !specialLeter;
-        console.log(specialLeter)
         leter = "";
       } 
       if(specialLeter) {

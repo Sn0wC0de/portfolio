@@ -4,7 +4,6 @@ function forLandingFraze() {
     let sentenceList = landingFraze.split(".");
     sentenceList.forEach((element,i) => {
         let div = document.createElement('div');
-        console.log(element);
         element = element + '!';
         if (element.length > 1) {
         let div = document.createElement('div');

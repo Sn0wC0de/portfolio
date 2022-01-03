@@ -55,6 +55,7 @@ nav {
   display: flex;
   flex-direction: column;
   animation: nav-load var(--nav-load-time) ease-in;
+  
 }
 
 nav ul li {
@@ -104,11 +105,18 @@ a {
 }
 
 .social {
-  margin-top: 200px;
   display: flex;
-  font-size: 2rem;
-  justify-content: space-between;
+  justify-self: center;
+  position: fixed;
+  bottom: clamp(10px, .5rem, 1rem);
+  font-size: 2.5rem;
+  left: .25rem;
   margin-bottom: 50px;
+  color: var(--font-color);
+  
+}
+.social a {
+  padding: .75rem;
 }
 
 .social :nth-child(3) {
@@ -127,7 +135,6 @@ a {
 .panel {
   width: 100%;
   overflow: hidden;
-  flex-wrap: wrap;
   background-color: var(--bg-panel)
 }
 
@@ -135,13 +142,15 @@ a {
   font-family: "Luckiest Guy", cursive;
   content: contain;
   height: 100vh;
-  font-size: 5.5vw;
-  margin-top: 20%;
+  font-size: clamp(3rem, 6rem, 5vw);
+  margin-top: 10%;
   margin-left: 4rem;
+
 }
 .landing-text div {
   display: flex;
-  max-height: 120px;
+  flex-wrap: wrap;
+  max-height: 200px;
 }
 
 .rotate {

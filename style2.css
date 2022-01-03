@@ -88,6 +88,7 @@ nav .list{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    line-height: 4rem;
     
 }
 .landing-text div {
@@ -131,4 +132,8 @@ img {
 }
 .panel {
   text-align: center;
+}
+.landing-text .name{
+  font-size: 10rem;
+  color:var(--hover-color)
 }

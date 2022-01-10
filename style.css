@@ -426,3 +426,17 @@ li:active,
     transform: translateX(0);
   }
 }
+
+
+
+#JT-image.lazy {
+  background-image: none;
+  background-color: #F1F1FA;
+}
+#JT-image {
+ background-image: url("./robot.png");
+ max-width: 300px;
+ height: 300px;
+}
+
+

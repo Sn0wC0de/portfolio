@@ -1,4 +1,5 @@
 const landingText = document.getElementById("landing-text");
+const landingFraze = `HeLLo Comrade. My name is Dmitrij. I'm Front-End WEB-Developer.`;
 
 // bollean to discover name in forLandingFraze()
 let specialLeter = false;
